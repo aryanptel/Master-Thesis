@@ -1,0 +1,57 @@
+using DifferentialEquations, Plots
+
+#mackey glass equation
+function mge(du, u, h, p, t)
+    mu = 0.5
+
+    n, gamma, beta, tau = p
+    hist = h(p, t - tau)[1]
+    du[1] = beta * hist / (1 + hist ^ n) - gamma * u[1]
+
+end
+
+h(p, t) = 0.5
+
+tau = 2
+lags = [tau]
+beta  = 0.2
+gamma  = 0.1
+n = 9.65
+
+p = (n, gamma,beta , tau)
+
+# Set the time span for integration
+t_start = 0.0
+t_end = 10000.0
+t_step = 0.002
+t_span = (t_start, t_end)
+
+u0 = [1]
+
+int(x) = floor(Int, x)
+
+prob = DDEProblem(mge, u0, h, t_span, p; constant_lags = lags)
+alg = MethodOfSteps(Tsit5())
+sol = solve(prob,alg, saveat = t_step)
+
+solu = reduce(vcat,sol.u)
+solu = solu[1:length(solu)]
+x_tau = sol[480000:(end - tau)]
+li = 480000:length(x_tau)
+x_tau = x_tau[li]
+x_t = solu[(480000 + tau):end]
+x_t = x_t[li]
+
+plot(x_t, x_tau)
+
+
+x_tau = []
+x_t = []
+for i=tau:length(sol.t)-1
+push!(x_tau,sol[i-tau+1])
+push!( x_t,sol[i+1])
+end
+arr_flat = reduce(vcat, x_t)
+
+plot(x_t, x_tau)
+
