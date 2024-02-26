@@ -2,9 +2,9 @@ This folder contains the implementation of a swarming algorithm within the Gazeb
 
 Here's an overview of the file structure and key components:
 
-main.launch: This launch file is the entry point. It loads the simulation world and includes another launch file called robots.launch.
-robots.launch: This file orchestrates the spawning of robots. It references one_robot.launch twice, with different initial positions and unique names for each robot. Care should be taken to maintain the correct format for initial positions.
-one_robot.launch: This launch file sets up a state publisher and spawns a single robot into the Gazebo simulation.
+**main.launch**: This launch file is the entry point. It loads the simulation world and includes another launch file called robots.launch.  
+**robots.launch**: This file orchestrates the spawning of robots. It references one_robot.launch twice, with different initial positions and unique names for each robot. Care should be taken to maintain the correct format for initial positions.  
+**one_robot.launch**: This launch file sets up a state publisher and spawns a single robot into the Gazebo simulation.  
 To control each robot individually, you can use the following commands:
 
 ```
