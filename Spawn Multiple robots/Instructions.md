@@ -17,7 +17,7 @@ To implement the swarming algorithm, terminate the control for robot2 and execut
 
 Terminal commands for execution:
 ```python
-roslaunch myrobot_description main.launch'
+roslaunch myrobot_description main.launch
 rosrun key_teleop key_teleop.py robot1:=robot1
 rosrun controller1.py
 ```
