@@ -15,7 +15,7 @@ For non-holonomic systems, we utilize a master-slave configuration with two diff
 (ii) Holonomic Systems (Drones):  
 To test the algorithm in holonomic systems, we employ a swarm of drones. The implementation utilizes ArduPilot and Mavproxy platforms. The algorithm is scripted in Python using the pymavlink module. The Drone folder contains a series of Python scripts along with instructions for their execution in chronological order.
 
-Coding Language: Majorly Julia  
+Coding Language: Julia (numerical solutions), Python (robotics)  
 
 Instructions:  
 Please refer to individual folders for detailed usage instructions and implementations. A detailed overview will be added soon. 
