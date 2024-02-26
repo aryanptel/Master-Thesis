@@ -1,5 +1,4 @@
-This folder contains the implementation of a swarming algorithm within the Gazebo simulation environment using ROS (Robot Operating System).
-The code is designed to support swarming behavior for multiple robots, although it is currently configured for two robots.
+This folder contains the implementation of a swarming algorithm within the Gazebo simulation environment using ROS (Robot Operating System).  The code is designed to support swarming behavior for multiple robots, although it is currently configured for two robots.
 
 Here's an overview of the file structure and key components:
 
