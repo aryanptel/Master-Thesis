@@ -15,8 +15,11 @@ rosrun key_teleop key_teleop.py robot2:=robot2
 To implement the swarming algorithm, terminate the control for robot2 and execute the controller.py script. This script facilitates the swarming behavior, with robot2 following robot1 while maintaining a certain distance.
 
 Terminal commands for execution:
-```python
+```
 roslaunch myrobot_description main.launch
 rosrun key_teleop key_teleop.py robot1:=robot1
 rosrun controller1.py
 ```
+
+This folder only contains the files which are created or changed for this purpose. Whole compiled project can be acessed through [this drive link.](https://drive.google.com/drive/folders/1PKEojZxiYV32fkGNxKVGCUwK8HssHCvD?usp=share_link)
+
