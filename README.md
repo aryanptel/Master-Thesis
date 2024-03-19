@@ -17,8 +17,8 @@ To test the algorithm in holonomic systems, we employ a swarm of drones. The imp
 
 Coding Language: Julia (numerical solutions), Python (robotics)  
 
-Please find a video of the implmentation of this algorithm on real drones in UGV folder. 
-
+**Please find a video of the implmentation of this algorithm on real drones in UGV folder. 
+**
 Instructions:  
 Please refer to individual folders for detailed usage instructions and implementations. A detailed overview will be added soon. 
 
